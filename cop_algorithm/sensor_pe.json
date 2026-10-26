@@ -1,0 +1,377 @@
+{
+  "_meta": {
+    "foot": {
+      "left": 0,
+      "right": 1
+    },
+    "ml": {
+      "medial": 0,
+      "lateral": 1
+    },
+    "seg": {
+      "toe": 0,
+      "fore": 1,
+      "mid": 2,
+      "heel": 3
+    },
+    "encoding": {
+      "x_own": "foot-length units, 0 = foot bbox mid-line, +x = medial",
+      "y_own": "foot-length units, 0 = heel, 1 = toe",
+      "x_shared": "shared frame: left foot x<0 / right foot x>0, x=0 = between feet",
+      "y_shared": "same as y_own",
+      "area": "geometric Voronoi tributary area in normalized foot-bbox area units; per foot sum = 0.6792 (not normalized to 1)",
+      "bounds": "insole outline bbox in foot-length units (x_own_min/max, x_shared_min/max)"
+    },
+    "bounds": {
+      "left": {
+        "x_own_min": -0.1698,
+        "x_own_max": 0.1698,
+        "x_shared_min": -0.3396,
+        "x_shared_max": 0.0
+      },
+      "right": {
+        "x_own_min": -0.1698,
+        "x_own_max": 0.1698,
+        "x_shared_min": 0.0,
+        "x_shared_max": 0.3396
+      }
+    },
+    "insole_model": "Moticon Insole3",
+    "n_sensors_per_foot": 16,
+    "source": "Grouvel 2023 Moticon Insole3 布局（41597_left/right.png 检测+编号确认）",
+    "datasets": [
+      "grouvel",
+      "imbalansense",
+      "underpressure",
+      "weargait_pd",
+      "whip",
+      "emg"
+    ],
+    "column_naming": "{foot}_pressure_{i}  (i=1..16)",
+    "note": "grouvel/imbalansense/underpressure/weargait_pd/whip 共用此布局；emg(Twente) 同 16ch/脚 但布局系借用未独立验证。"
+  },
+  "left": {
+    "pressure_1": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 3,
+      "area": 0.042837144,
+      "x_own": 0.0715,
+      "y_own": 0.1054,
+      "x_shared": -0.0983,
+      "y_shared": 0.1054
+    },
+    "pressure_2": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 3,
+      "area": 0.040527864,
+      "x_own": -0.0234,
+      "y_own": 0.0882,
+      "x_shared": -0.1932,
+      "y_shared": 0.0882
+    },
+    "pressure_3": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 3,
+      "area": 0.04139724,
+      "x_own": 0.0636,
+      "y_own": 0.2362,
+      "x_shared": -0.1062,
+      "y_shared": 0.2362
+    },
+    "pressure_4": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 3,
+      "area": 0.040188264,
+      "x_own": -0.043,
+      "y_own": 0.213,
+      "x_shared": -0.2128,
+      "y_shared": 0.213
+    },
+    "pressure_5": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 2,
+      "area": 0.052108224,
+      "x_own": 0.0512,
+      "y_own": 0.3755,
+      "x_shared": -0.1186,
+      "y_shared": 0.3755
+    },
+    "pressure_6": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 2,
+      "area": 0.044256672,
+      "x_own": -0.0621,
+      "y_own": 0.3469,
+      "x_shared": -0.2319,
+      "y_shared": 0.3469
+    },
+    "pressure_7": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 2,
+      "area": 0.06330144,
+      "x_own": 0.1047,
+      "y_own": 0.5532,
+      "x_shared": -0.0651,
+      "y_shared": 0.5532
+    },
+    "pressure_8": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 2,
+      "area": 0.06574656,
+      "x_own": -0.1091,
+      "y_own": 0.4897,
+      "x_shared": -0.2789,
+      "y_shared": 0.4897
+    },
+    "pressure_9": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 1,
+      "area": 0.039977712,
+      "x_own": 0.118,
+      "y_own": 0.7589,
+      "x_shared": -0.0518,
+      "y_shared": 0.7589
+    },
+    "pressure_10": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 1,
+      "area": 0.031942776,
+      "x_own": 0.0438,
+      "y_own": 0.742,
+      "x_shared": -0.126,
+      "y_shared": 0.742
+    },
+    "pressure_11": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.03110736,
+      "x_own": -0.0146,
+      "y_own": 0.7255,
+      "x_shared": -0.1844,
+      "y_shared": 0.7255
+    },
+    "pressure_12": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.03389208,
+      "x_own": -0.0751,
+      "y_own": 0.7066,
+      "x_shared": -0.2449,
+      "y_shared": 0.7066
+    },
+    "pressure_13": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.033667944,
+      "x_own": -0.1367,
+      "y_own": 0.6837,
+      "x_shared": -0.3065,
+      "y_shared": 0.6837
+    },
+    "pressure_14": {
+      "foot": 0,
+      "ml": 0,
+      "seg": 0,
+      "area": 0.04343484,
+      "x_own": 0.0853,
+      "y_own": 0.9019,
+      "x_shared": -0.0845,
+      "y_shared": 0.9019
+    },
+    "pressure_15": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 0,
+      "area": 0.04391028,
+      "x_own": -0.0051,
+      "y_own": 0.8825,
+      "x_shared": -0.1749,
+      "y_shared": 0.8825
+    },
+    "pressure_16": {
+      "foot": 0,
+      "ml": 1,
+      "seg": 0,
+      "area": 0.0309036,
+      "x_own": -0.0931,
+      "y_own": 0.8566,
+      "x_shared": -0.2629,
+      "y_shared": 0.8566
+    }
+  },
+  "right": {
+    "pressure_1": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 3,
+      "area": 0.042837144,
+      "x_own": 0.0715,
+      "y_own": 0.1054,
+      "x_shared": 0.0983,
+      "y_shared": 0.1054
+    },
+    "pressure_2": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 3,
+      "area": 0.040527864,
+      "x_own": -0.0234,
+      "y_own": 0.0882,
+      "x_shared": 0.1932,
+      "y_shared": 0.0882
+    },
+    "pressure_3": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 3,
+      "area": 0.04139724,
+      "x_own": 0.0636,
+      "y_own": 0.2362,
+      "x_shared": 0.1062,
+      "y_shared": 0.2362
+    },
+    "pressure_4": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 3,
+      "area": 0.040188264,
+      "x_own": -0.043,
+      "y_own": 0.213,
+      "x_shared": 0.2128,
+      "y_shared": 0.213
+    },
+    "pressure_5": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 2,
+      "area": 0.052108224,
+      "x_own": 0.0512,
+      "y_own": 0.3755,
+      "x_shared": 0.1186,
+      "y_shared": 0.3755
+    },
+    "pressure_6": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 2,
+      "area": 0.044256672,
+      "x_own": -0.0621,
+      "y_own": 0.3469,
+      "x_shared": 0.2319,
+      "y_shared": 0.3469
+    },
+    "pressure_7": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 2,
+      "area": 0.06330144,
+      "x_own": 0.1047,
+      "y_own": 0.5532,
+      "x_shared": 0.0651,
+      "y_shared": 0.5532
+    },
+    "pressure_8": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 2,
+      "area": 0.06574656,
+      "x_own": -0.1091,
+      "y_own": 0.4897,
+      "x_shared": 0.2789,
+      "y_shared": 0.4897
+    },
+    "pressure_9": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 1,
+      "area": 0.039977712,
+      "x_own": 0.118,
+      "y_own": 0.7589,
+      "x_shared": 0.0518,
+      "y_shared": 0.7589
+    },
+    "pressure_10": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 1,
+      "area": 0.031942776,
+      "x_own": 0.0438,
+      "y_own": 0.742,
+      "x_shared": 0.126,
+      "y_shared": 0.742
+    },
+    "pressure_11": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.03110736,
+      "x_own": -0.0146,
+      "y_own": 0.7255,
+      "x_shared": 0.1844,
+      "y_shared": 0.7255
+    },
+    "pressure_12": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.03389208,
+      "x_own": -0.0751,
+      "y_own": 0.7066,
+      "x_shared": 0.2449,
+      "y_shared": 0.7066
+    },
+    "pressure_13": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 1,
+      "area": 0.033667944,
+      "x_own": -0.1367,
+      "y_own": 0.6837,
+      "x_shared": 0.3065,
+      "y_shared": 0.6837
+    },
+    "pressure_14": {
+      "foot": 1,
+      "ml": 0,
+      "seg": 0,
+      "area": 0.04343484,
+      "x_own": 0.0853,
+      "y_own": 0.9019,
+      "x_shared": 0.0845,
+      "y_shared": 0.9019
+    },
+    "pressure_15": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 0,
+      "area": 0.04391028,
+      "x_own": -0.0051,
+      "y_own": 0.8825,
+      "x_shared": 0.1749,
+      "y_shared": 0.8825
+    },
+    "pressure_16": {
+      "foot": 1,
+      "ml": 1,
+      "seg": 0,
+      "area": 0.0309036,
+      "x_own": -0.0931,
+      "y_own": 0.8566,
+      "x_shared": 0.2629,
+      "y_shared": 0.8566
+    }
+  }
+}

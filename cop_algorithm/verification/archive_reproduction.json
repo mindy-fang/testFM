@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "c9d6ada842e22e2f8355ab9ec594e2ab8b52a76d008fb2536f5556b4e5a1e7d8",
+  "csv_files": 259,
+  "rows": 233123,
+  "COP_columns": 6,
+  "max_absolute_difference": 8.881784197001252e-16,
+  "tolerance": 1e-12,
+  "all_values_and_missing_patterns_match": true,
+  "source_archive_unchanged": true,
+  "meaning": "Arithmetic reproduction only, not force-plate accuracy."
+}

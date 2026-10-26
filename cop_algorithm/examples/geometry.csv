@@ -1,0 +1,4 @@
+group,pressure_column,x,y,area
+foot,p1,0,0,1
+foot,p2,100,0,2
+foot,p3,0,100,1

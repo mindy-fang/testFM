@@ -1,0 +1,128 @@
+{
+  "algorithm": "pressure-area-weighted-centroid-v1",
+  "formula": "COP = sum(pressure_i * area_i * coordinate_i) / sum(pressure_i * area_i)",
+  "input_path": "C:\\Users\\19501\\Documents\\ChatGPT\\公司项目\\output\\cop_algorithm_delivery_20261023\\examples\\grouvel_pressure.csv",
+  "input_sha256": "01846ae5d670bc84458f33ed64782b725511ac58e71cdebc5a75a176860ecd94",
+  "geometry_path": "C:\\Users\\19501\\Documents\\ChatGPT\\公司项目\\output\\cop_algorithm_delivery_20261023\\sensor_pe.json",
+  "geometry_sha256": "320fc743885153a44958b49db7ea7a400cc19939e7bb3f22614e4622a5851c55",
+  "geometry_info": {
+    "format": "grouvel_sensor_pe_json",
+    "original_metadata": {
+      "foot": {
+        "left": 0,
+        "right": 1
+      },
+      "ml": {
+        "medial": 0,
+        "lateral": 1
+      },
+      "seg": {
+        "toe": 0,
+        "fore": 1,
+        "mid": 2,
+        "heel": 3
+      },
+      "encoding": {
+        "x_own": "foot-length units, 0 = foot bbox mid-line, +x = medial",
+        "y_own": "foot-length units, 0 = heel, 1 = toe",
+        "x_shared": "shared frame: left foot x<0 / right foot x>0, x=0 = between feet",
+        "y_shared": "same as y_own",
+        "area": "geometric Voronoi tributary area in normalized foot-bbox area units; per foot sum = 0.6792 (not normalized to 1)",
+        "bounds": "insole outline bbox in foot-length units (x_own_min/max, x_shared_min/max)"
+      },
+      "bounds": {
+        "left": {
+          "x_own_min": -0.1698,
+          "x_own_max": 0.1698,
+          "x_shared_min": -0.3396,
+          "x_shared_max": 0.0
+        },
+        "right": {
+          "x_own_min": -0.1698,
+          "x_own_max": 0.1698,
+          "x_shared_min": 0.0,
+          "x_shared_max": 0.3396
+        }
+      },
+      "insole_model": "Moticon Insole3",
+      "n_sensors_per_foot": 16,
+      "source": "Grouvel 2023 Moticon Insole3 布局（41597_left/right.png 检测+编号确认）",
+      "datasets": [
+        "grouvel",
+        "imbalansense",
+        "underpressure",
+        "weargait_pd",
+        "whip",
+        "emg"
+      ],
+      "column_naming": "{foot}_pressure_{i}  (i=1..16)",
+      "note": "grouvel/imbalansense/underpressure/weargait_pd/whip 共用此布局；emg(Twente) 同 16ch/脚 但布局系借用未独立验证。"
+    }
+  },
+  "rows": 306,
+  "min_weight": 0.0,
+  "shared_cop": true,
+  "removed_previous_computed_fields": [],
+  "non_numeric_or_blank_pressure_cells": 0,
+  "output_coordinate_units": "Exactly the units/frame of supplied coordinates; no automatic mm conversion.",
+  "load_weight_units": "pressure units * area units; not necessarily N.",
+  "invalid_policy": "Any negative/missing/nonfinite sensor invalidates its group for that frame. Insufficient total load gives blank COP. Shared COP requires all sensors valid.",
+  "shared_frame_note": "Requires compatible common-frame coordinates and comparable cross-group area scales. Original Grouvel shared coordinates are a fixed illustrative layout, not dynamic laboratory COP.",
+  "groups": {
+    "left": {
+      "valid_rows": 226,
+      "invalid_rows": 80,
+      "sensors": 16,
+      "pressure_columns": [
+        "left pressure 1[N/cm²]",
+        "left pressure 2[N/cm²]",
+        "left pressure 3[N/cm²]",
+        "left pressure 4[N/cm²]",
+        "left pressure 5[N/cm²]",
+        "left pressure 6[N/cm²]",
+        "left pressure 7[N/cm²]",
+        "left pressure 8[N/cm²]",
+        "left pressure 9[N/cm²]",
+        "left pressure 10[N/cm²]",
+        "left pressure 11[N/cm²]",
+        "left pressure 12[N/cm²]",
+        "left pressure 13[N/cm²]",
+        "left pressure 14[N/cm²]",
+        "left pressure 15[N/cm²]",
+        "left pressure 16[N/cm²]"
+      ],
+      "nonfinite_rows": 0,
+      "negative_rows": 0
+    },
+    "right": {
+      "valid_rows": 231,
+      "invalid_rows": 75,
+      "sensors": 16,
+      "pressure_columns": [
+        "right pressure 1[N/cm²]",
+        "right pressure 2[N/cm²]",
+        "right pressure 3[N/cm²]",
+        "right pressure 4[N/cm²]",
+        "right pressure 5[N/cm²]",
+        "right pressure 6[N/cm²]",
+        "right pressure 7[N/cm²]",
+        "right pressure 8[N/cm²]",
+        "right pressure 9[N/cm²]",
+        "right pressure 10[N/cm²]",
+        "right pressure 11[N/cm²]",
+        "right pressure 12[N/cm²]",
+        "right pressure 13[N/cm²]",
+        "right pressure 14[N/cm²]",
+        "right pressure 15[N/cm²]",
+        "right pressure 16[N/cm²]"
+      ],
+      "nonfinite_rows": 0,
+      "negative_rows": 0
+    },
+    "global": {
+      "valid_rows": 306,
+      "invalid_rows": 0
+    }
+  },
+  "output_sha256": "3b220e2681ec02761c0082d83eccb166f34c0a7bf20ce76ac90971f32da7bed1"
+}

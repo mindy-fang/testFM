@@ -1,0 +1,36 @@
+{
+  "algorithm": "pressure-area-weighted-centroid-v1",
+  "formula": "COP = sum(pressure_i * area_i * coordinate_i) / sum(pressure_i * area_i)",
+  "input_path": "C:\\Users\\19501\\Documents\\ChatGPT\\公司项目\\output\\cop_algorithm_delivery_20261023\\examples\\pressure.csv",
+  "input_sha256": "dbd02f273c3dc453517ed2d4a8d478e5ca0cb259fd83d68f279f1fa77a302418",
+  "geometry_path": "C:\\Users\\19501\\Documents\\ChatGPT\\公司项目\\output\\cop_algorithm_delivery_20261023\\examples\\geometry.csv",
+  "geometry_sha256": "a38397024db054d95a1213d3a87eaf5b17a84b4d04d1e5a6706fe0588e5d18fe",
+  "geometry_info": {
+    "format": "geometry_csv",
+    "units": "Same as supplied x/y; area is used exactly as supplied."
+  },
+  "rows": 6,
+  "min_weight": 0.0,
+  "shared_cop": false,
+  "removed_previous_computed_fields": [],
+  "non_numeric_or_blank_pressure_cells": 1,
+  "output_coordinate_units": "Exactly the units/frame of supplied coordinates; no automatic mm conversion.",
+  "load_weight_units": "pressure units * area units; not necessarily N.",
+  "invalid_policy": "Any negative/missing/nonfinite sensor invalidates its group for that frame. Insufficient total load gives blank COP. Shared COP requires all sensors valid.",
+  "shared_frame_note": "Requires compatible common-frame coordinates and comparable cross-group area scales. Original Grouvel shared coordinates are a fixed illustrative layout, not dynamic laboratory COP.",
+  "groups": {
+    "foot": {
+      "valid_rows": 3,
+      "invalid_rows": 3,
+      "sensors": 3,
+      "pressure_columns": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "nonfinite_rows": 1,
+      "negative_rows": 1
+    }
+  },
+  "output_sha256": "6b7e689e17e51215dd962e6b032d64284b750a1d5b97f18058c6b87c4549519a"
+}

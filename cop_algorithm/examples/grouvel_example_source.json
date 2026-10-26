@@ -1,0 +1,9 @@
+{
+  "source_zip": "D:\\公司\\数据库\\grouvel.zip",
+  "source_csv": "P02_S01/P02_S01_Gait_01.csv",
+  "rows": 306,
+  "pressure_columns": 32,
+  "source_zip_sha256": "c9d6ada842e22e2f8355ab9ec594e2ab8b52a76d008fb2536f5556b4e5a1e7d8",
+  "geometry_sha256": "320fc743885153a44958b49db7ea7a400cc19939e7bb3f22614e4622a5851c55",
+  "geometry_note": "Original approximate geometry and Voronoi relative areas retained verbatim; no new calibration."
+}

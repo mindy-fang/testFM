@@ -1,0 +1,2 @@
+# Preserve the exact file bytes recorded in manifest.sha256.
+* -text

@@ -49,3 +49,12 @@ assert logits.shape == (2, 9)
 150 帧窗口、75 帧步长，不跨文件。三折测试受试者为 Subj04–06、Subj07–09、Subj10–12，各折其余 6 人训练。种子 20260917、20260918、20260919；折内种子为 seed + 100 × (fold − 1)。固定训练 30 轮，使用最后一轮，AdamW（lr=0.001、weight_decay=0.0001）、batch size 128、梯度裁剪 1.0、训练类别逆频率加权交叉熵，无早停或学习率调度。
 
 旧 `transformer_model.py` 和 `mae_model.py` 已从当前版本移除，可从 Git 历史查阅。此处 ViT-1D 使用时间 patch，不是旧的逐帧 Transformer，也不包含 MAE 预训练模块。
+
+## COP 计算脚本
+
+独立的压力×面积加权 COP 计算脚本位于 [`cop_algorithm/`](cop_algorithm/)，包含坐标配置、输入示例、中文说明及验证记录。
+
+- [使用说明](cop_algorithm/README_中文.md)
+- [下载完整 COP 脚本包](downloads/cop_algorithm.zip)
+
+计算输入为传感器压力、坐标和面积，无需测力板。已有核验确认脚本能复现原算法结果；这不等同于测力板精度验收通过。
