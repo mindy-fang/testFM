@@ -1,0 +1,9 @@
+# CPU acceptance on Python 3.11; install a hardware-compatible torch wheel separately.
+numpy==2.4.6
+pandas==3.1.0
+scipy==1.17.1
+wfdb==4.3.1
+pytest==9.2.0
+ruff==0.17.5
+setuptools==84.2.1
+# torch 2.9.1+cu128 used for CPU acceptance; other versions not verified here.

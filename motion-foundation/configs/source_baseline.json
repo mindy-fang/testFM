@@ -1,0 +1,15 @@
+{
+  "framework": "V13",
+  "source_commit": "9436610",
+  "source_date": "2026-11-13",
+  "model_parameters": 533760,
+  "pretrained_weights_included": false,
+  "core_files_byte_identical_to_source": {
+    "contracts.py": "de6179a316c52082b029cff0bf68366608ba8ecc20e4d0b2cb2952cd037eddec",
+    "model.py": "0e8b197489d407e039887ea8c4535f96afddd7f1441b903375cc51f1a51ff9d3",
+    "objectives.py": "a2d380f43232ff4d053306bb9bdc46e354435e5970b10b00efaab27ab1dc049c",
+    "denoising.py": "9a39afc3e8f4575241a73dacfadef43a25507bfa00a1b7171514c8cd859f1be1"
+  },
+  "training_entry": "train_mixed.py was an untracked research file in the source workspace; the packaged variant adds configuration and input safeguards",
+  "compatibility": "Core parameter names preserved; masked and denoising checkpoint protocols remain separate"
+}

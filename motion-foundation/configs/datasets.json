@@ -1,0 +1,19 @@
+{
+  "status": "adapter_catalog_not_training_manifest",
+  "scope": "public pressure and IMU waveforms only; data not bundled",
+  "datasets": [
+    {"id":"grouvel","adapter":"datasets.build_corpus:Builder.legacy","input":"audited legacy FIR and body caches","modalities":["pressure","acc","gyro"]},
+    {"id":"imbalansense","adapter":"datasets.build_corpus:Builder.legacy","input":"audited legacy FIR cache","modalities":["pressure","acc","gyro"]},
+    {"id":"underpressure","adapter":"datasets.build_corpus:Builder.legacy","input":"audited legacy FIR cache","modalities":["pressure","acc","gyro"]},
+    {"id":"weargait_pd","adapter":"datasets.build_corpus:Builder.pd","input":"audited insole and body caches","modalities":["pressure","acc","gyro"]},
+    {"id":"physionet_pedar","adapter":"datasets.build_corpus:Builder.physionet","input":"WFDB header and calibrated signals","modalities":["pressure"]},
+    {"id":"pedar_cycling","adapter":"datasets.build_corpus:Builder.pedar","input":"Pedar Data.zip","modalities":["pressure"]},
+    {"id":"second_skin","adapter":"datasets.build_corpus:Builder.second_skin","input":"OpenSource_Dataset.zip real sensor CSV","modalities":["acc","gyro"]},
+    {"id":"tekscan_everyday","adapter":"datasets.extend_corpus","input":"restricted-decoded pbz2 raw cubes","modalities":["pressure"]},
+    {"id":"twente_insole","adapter":"datasets.remaining_ingest","input":"Raw_data.rar insole TXT","modalities":["pressure","acc","gyro"]},
+    {"id":"whip_insole","adapter":"datasets.remaining_ingest","input":"dataset.zip insole waveform members","modalities":["pressure","acc","gyro"]},
+    {"id":"xsensor_locomotion","adapter":"datasets.build_corpus:Builder.xsensor","input":"PLANTAR ZIP members in RAR","modalities":["pressure"]}
+  ],
+  "not_admitted": ["bigthree100: unit/gravity evidence pending", "strengthsense: time/gyro unit and use restriction review pending", "tekscan_offloading: calibrated FSX decode pending", "whip_phone_watch: physical semantics pending"],
+  "restrictions": "Original source terms apply; availability is not permission to redistribute or use commercially. No source licenses are replaced by repository access."
+}
