@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motion-foundation"
+version = "0.1.0"
+description = "Extensible pressure and IMU motion foundation research framework"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.7,<3", "numpy>=2,<3"]
+
+[project.optional-dependencies]
+ingest = ["pandas>=2.2,<4", "scipy>=1.13,<2", "wfdb>=4.1,<5", "threadpoolctl>=3,<4"]
+dev = ["pytest>=8,<10", "build>=1,<2", "ruff>=0.8,<1"]
+
+[project.scripts]
+motion-selfcheck = "motion_foundation.selfcheck:main"
+motion-train = "motion_foundation.train_mixed:main"
+motion-validate = "motion_foundation.verify_ingest:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
